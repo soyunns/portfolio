@@ -1,0 +1,448 @@
+@charset "utf-8";
+
+@import url('https://fonts.googleapis.com/css2?family=Edu+SA+Beginner:wght@400;700&display=swap');
+
+@import url('https://fonts.googleapis.com/css2?family=Josefin+Sans:wght@300;700&display=swap');
+
+@import url('https://fonts.googleapis.com/css2?family=Dosis:wght@400;600&display=swap');
+
+@import url('https://fonts.googleapis.com/css2?family=Kalam&display=swap');
+
+@font-face {
+    font-family: 'GangwonEdu_OTFBoldA';
+    src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_2201-2@1.0/GangwonEdu_OTFBoldA.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'GangwonEduPowerExtraBoldA';
+    src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_2201-2@1.0/GangwonEduPowerExtraBoldA.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'yg-jalnan';
+    src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_four@1.2/JalnanOTF00.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+}
+
+@import url('https://fonts.googleapis.com/css2?family=Modak&display=swap');
+
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    /* font-family: 'Edu SA Beginner', cursive; */
+    /* font-family: 'Josefin Sans', sans-serif; */
+    /* font-family: 'Dosis', sans-serif; */
+    font-family: 'GangwonEdu_OTFBoldA';
+    letter-spacing: 2px;
+}
+
+ul, li {
+    list-style: none;
+}
+
+a {
+    text-decoration: none;
+    color: black;
+}
+
+.wrap {
+    width: 100%;
+}
+
+.clear::after {
+    content: '';
+    display: block;
+    clear: both;
+}
+
+/* header */
+.wrap header {
+    background-color: rgb(255, 255, 255);
+    line-height: 70px;
+    box-shadow: 0 1px 1px rgba(0, 0, 0, 0.25);
+    border-bottom: 1px solid rgb(220, 220, 220);
+}
+
+.wrap header .head {
+    width: 1300px;
+    margin: 0 auto;
+}
+
+.wrap header .head h1 {
+    float: left;
+    font-size: 30px;
+    margin-top: 2px;
+    font-family: 'yg-jalnan';
+}
+
+.wrap header .head .menu {
+    float: right;
+}
+
+.wrap header .head .menu li {
+    float: left;
+}
+
+.wrap header .head .menu li a {
+    display: block;
+    width: 120px;
+    text-align: center;
+    margin-top: 5px;
+    font-size: 18px;
+    text-shadow: 0.4px 0.4px, 0.4px 0.4px;
+    position: relative;
+}
+
+.wrap header .head .menu li:last-child a {
+    padding-right: 0;
+}
+
+.wrap header .head .menu li a::after {
+    content: '';
+    display: block;
+    overflow: hidden;
+    width: 0;
+    height: 2px;
+    position: absolute;
+    top: 70%;
+    left: 50%;
+    transform: translateX(-50%);
+    transition: all .3s;
+    opacity: 0;
+}
+
+.wrap header .head .menu li a.active::after {
+    width: 60%;
+    opacity: 1;
+    background-color: tomato;
+}
+.wrap header .head .menu li:nth-child(2n) a.active:after {
+    width: 80%;
+}
+/* main */
+.wrap main {
+    background-color: rgb(248, 247, 243);
+}
+
+.wrap main .content {
+    width: 100%;
+    height: 92vh;
+    margin: 0 auto;
+}
+
+.wrap main .content .content-item {
+    position: absolute;
+    width: 100%;
+    
+}
+
+/* main */
+section.content-item {
+    width: 100%;
+    height: 90vh;
+    display: flex;
+    /* background-color: rgb(255, 255, 255); */
+    justify-content: space-around;
+    overflow: hidden;
+}
+
+/* main - home */
+section.content-item .home-video {
+    width: 50%;
+}
+
+section.content-item .home-video video{
+    width: 55%;
+    float: right;
+    padding-top: 100px;
+    padding-right: 100px;
+}
+
+section.content-item .home-title {
+    width: 50%;
+    padding-top: 200px;
+}
+
+section.content-item .home-title h4 {
+    font-size: 4rem;
+    font-family: 'yg-jalnan';
+}
+
+section.content-item .home-title h2 {
+    font-size: 1.5rem;
+    margin: 2rem 0;
+    letter-spacing: 3px;
+}
+section.content-item .home-title span {
+    font-size: 2rem;
+}
+
+section.content-item .home-title button.work {
+    background-color: rgb(224, 106, 78);
+    border: 3px solid white;
+    border-radius: 20px;
+    padding: 18px 30px;
+    color: #fff;
+    font-weight: bold;
+    font-size: 15px;
+    margin-top: 9rem;
+    cursor: pointer;
+}
+
+/* main - profile */
+section.content-item {
+    width: 1200px;
+    height: 920px;
+    margin: 50px auto 0;
+    padding: 30px;
+}
+
+section.content-item .profile-detail {
+    width: 100%;
+    height: 80%;
+}
+
+section.content-item .profile-detail .info {
+    width: 25%;
+    height: 100%;
+    padding: 20px;
+    margin-left: 220px;
+    float: left;
+}
+
+section.content-item .profile-detail .info img {
+    width: 100%;
+    height: 70%;
+    object-fit: cover;
+}
+
+section.content-item .profile-detail .info > * {
+    margin-top: 30px;
+}
+
+section.content-item .profile-detail .detail {
+    width: 50%;
+    height: 100%;
+    padding: 20px;
+    float: left;
+    margin-left: 50px;
+}
+
+section.content-item .profile-detail .detail h2 {
+    margin-bottom: 20px;
+}
+
+section.content-item .profile-detail .detail p {
+    background-color: #fff;
+    border-radius: 40px;
+    padding: 25px 10px 20px 30px;
+}
+
+section.content-item .profile-detail .detail .skill {
+    width: 100%;
+    height: 20%;
+    margin-top: 30px;
+    margin-bottom: 40px;
+}
+
+section.content-item .profile-detail .detail .certificate {
+    margin-bottom: 40px;
+}
+
+section.content-item .profile-detail .detail .introduction {
+    width: 100%;
+    height: 50%;
+}
+
+/* main - work */
+
+section.content-item .work-collection {
+    display: flex;
+    width: 80vw;
+    height: 100%;
+    /* padding-top: 15vh; */
+    padding-left: 6vh;
+}
+
+section.content-item .work-collection li {
+    display: flex;
+    /* flex-wrap: wrap; */
+    /* justify-content: center; */
+    align-content: space-between;
+    flex: 1;
+    padding: 100px 60px 100px;
+    opacity: 0.6;
+    cursor: pointer;
+    transition: all .5s;
+    position: relative;
+}
+
+section.content-item .work-collection li:hover {
+    opacity: 1;
+    flex: 1.5 1;
+    font-weight: bold;
+}
+
+section.content-item .work-collection li::before {
+    content: '';
+    display: block;
+    position: absolute;
+    top: 0;
+    left: -200px;
+    width: 80%;
+    height: 96.7%;
+    background-color: rgb(120, 159, 138);
+    opacity: 0;
+    visibility: hidden;
+    transition: all .5s;
+}
+
+section.content-item .work-collection li:hover::before {
+    left: 0;
+    opacity: 1;
+    visibility: visible;
+}
+
+section.content-item .work-collection li .inner {
+    display: flex;
+    flex-wrap: wrap;
+    align-content: space-between;
+    position: relative;
+}
+
+section.content-item .work-collection li .inner .txt {
+    width: 100%;
+}
+
+section.content-item .work-collection li:hover .inner .txt {
+    width: 75%;
+}
+
+section.content-item .work-collection li .inner .txt h3 {
+    font-size: 2rem;
+    color: #fff;
+    padding-top: 70px;
+    margin-bottom: 40px;
+    transition: all .5s;
+}
+
+section.content-item .work-collection li:hover .inner .txt h3 {
+    font-size: 5vw;
+    padding-top: 0;
+}
+
+section.content-item .work-collection li .inner .txt h3::after {
+    content: '';
+    display: block;
+    width: 40px;
+    height: 2px;
+    background-color: #777;
+    margin-top: 20px;
+    transition: all .5s;
+}
+
+section.content-item .work-collection li:hover .inner .txt h3::after {
+    width: 120px;
+    background-color: rgb(255, 255, 157);
+}
+
+section.content-item .work-collection li .inner .txt p {
+    color: rgb(57, 71, 32);
+}
+
+section.content-item .work-collection li:hover .inner .txt p {
+    font-size: 20px;
+}
+
+section.content-item .work-collection li .inner figure {
+    width: 100%;
+    height: 30%;
+}
+
+section.content-item .work-collection li .inner figure video {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.pop-up {
+    position: absolute;
+    top: 0;
+    left: -100vw;
+    /* left: 0; */
+    width: 100vw;
+    height: 853px;
+    padding: 10vh 20vw;
+    display: flex;
+    background-color: rgb(226, 217, 162);
+    justify-content: space-between;
+}
+
+.pop-up.active {
+    left: 0;
+}
+
+.pop-up .txt {
+    flex: 0 1 25%;
+    height: 100%;
+}
+
+.pop-up .txt h2 {
+    font-size: 5rem;
+    margin-bottom: 20px;
+    color: #fff;
+}
+
+.pop-up .txt p {
+    font-size: 1.5rem;
+    margin-bottom: 60px;
+    color: #414410;
+    /* font-weight: bold; */
+}
+
+.pop-up .txt button {
+    color: #fff;
+    cursor: pointer;
+    outline: none;
+    border: none;
+    background-color: transparent;
+    font-size: 1.8rem;
+    text-transform: uppercase;
+    letter-spacing: -0.7px;
+}
+
+.pop-up .txt button:hover {
+    color: #141b15;
+    text-decoration: line-through;
+}
+
+.pop-up figure {
+    flex: 0 1 70%;
+    height: 100%;
+}
+
+.pop-up figure video {
+    width: 100%;
+    height: 100%;
+    /* object-fit: cover; */
+}
+
+/* footer */
+footer {
+    /* height: 50px; */
+    /* background-color: #414410; */
+    position: fixed;
+    bottom: 5px;
+    left: 50%;
+    transform: translateX(-50%);
+    padding: 10px 0;
+    text-align: center;
+    font-size: 14px;
+}
